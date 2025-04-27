@@ -1,0 +1,251 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #fdf2f8, #f0f4ff, #e0f7fa);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .mia-profile {
+    position: absolute;
+    width: 286px;
+    height: 292px;
+    left: 800px;
+    top: 350px;
+    background: url('mia_wu_profile.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px; /* 可选：圆角更好看 */
+    
+  }
+  
+  img {
+    display: none;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #666;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    min-height: 80vh;
+  }
+  
+  .header-content .text {
+    max-width: 600px;
+  }
+  
+  .header-content h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 1.2; /* 默认太紧，可适当调 */
+    animation: fadeInUp 1s ease;
+  }
+  
+  .header-content p {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #444;
+    letter-spacing: 0.3px; /* 微调字间距，呼吸感更好 */
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  .buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .buttons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .buttons button:first-child {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .buttons button:first-child:hover {
+    background-color: #333;
+  }
+  
+  .buttons button:last-child {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .buttons button:last-child:hover {
+    background-color: #ddd;
+  }
+  
+  .emoji {
+    max-width: 250px;
+    border-radius: 50%;
+    animation: fadeIn 2s ease;
+  }
+  
+  .emoji img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .projects {
+    padding: 4rem 5%;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    margin: 2rem;
+  }
+  
+  .projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .project-card .content {
+    padding: 1rem;
+  }
+  
+  .project-card .content h3 {
+    margin: 0.1;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .project-card .content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .project-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-button:hover {
+    background-color: #333;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  
+
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .emoji {
+      margin-top: 2rem;
+    }
+  }
+  
